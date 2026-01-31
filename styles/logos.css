@@ -1,0 +1,120 @@
+/* ===== LOGO MARQUEE ===== */
+.logos {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.logos__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.logos__marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--spacing-lg);
+}
+
+.logos__track {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Marquee Rows */
+.logos__row {
+  display: flex;
+  width: max-content;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.logos__row--left {
+  animation-name: marqueeLeft;
+  animation-duration: 40s;
+}
+
+.logos__row--right {
+  animation-name: marqueeRight;
+  animation-duration: 35s;
+  animation-direction: reverse;
+}
+
+/* Logo Items */
+.logos__logo {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 80px;
+  margin: 0 var(--spacing-md);
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--color-white);
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logos__logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Legacy support for existing logo__item (will be removed) */
+.logo__item {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 80px;
+  margin: 0 var(--spacing-md);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.logo__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Pause animation on hover */
+.logos__marquee:hover .logos__row {
+  animation-play-state: paused;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .logos__row {
+    animation: none;
+  }
+
+  .logos__track {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Marquee Animations */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

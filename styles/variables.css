@@ -1,0 +1,243 @@
+/* Design Variables - Extracted from Screenshots */
+:root {
+  /* Header Height */
+  --header-height: 80px;
+
+  /* Primary Color Palette */
+  --color-primary: #1a365d;
+  --color-primary-light: #2d7bc8;
+  --color-primary-dark: #0f2540;
+
+  /* Secondary Colors */
+  --color-secondary: #ebf5ff;
+  --color-secondary-light: #f0f8ff;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* Text Colors */
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-dark: #1f2937;
+  --color-text-gray: #6b7280;
+  --color-text-light: #f9fafb;
+  --color-text-inverse: #ffffff;
+
+  /* Functional Colors */
+  --color-success: #10b981;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-light: #dbeafe;
+
+  /* Brand Gradient */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #1a365d 0%, #2d7bc8 100%);
+  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+  --spacing-4xl: 6rem; /* 96px */
+  --spacing-5xl: 8rem; /* 128px */
+
+  /* Typography Scale */
+  --font-family-primary:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", system-ui, sans-serif;
+  --font-family-heading: var(--font-family-primary);
+  --font-family-mono:
+    "SF Mono", "Monaco", "Cascadia Code", "Roboto Mono", monospace;
+
+  /* Font Aliases for CSS Architecture */
+  --font-primary: var(--font-family-primary);
+  --font-heading: var(--font-family-heading);
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 2rem; /* 32px */
+  --font-size-4xl: 2.5rem; /* 40px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 4rem; /* 64px */
+
+  /* Professional Typography Scale */
+  --font-size-hero-title: clamp(2.5rem, 5vw, 4rem); /* Responsive hero */
+  --font-size-hero-subtitle: clamp(1.25rem, 2.5vw, 1.75rem); /* Hero subtitle */
+  --font-size-section-title: 2.5rem; /* 40px section headings */
+  --font-size-card-title: 1.5rem; /* 24px card titles */
+  --font-size-body: 1.125rem; /* 18px body text */
+  --font-size-small: 0.875rem; /* 14px small text */
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Border Radius */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+  --radius-2xl: 1.5rem; /* 24px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* Component Specific Variables */
+  --hero-height-mobile: 100vh;
+  --hero-height-desktop: 80vh;
+  --header-height: 4rem;
+  --footer-height: auto;
+
+  /* Animation Variables */
+  --marquee-speed: 30s;
+  --slider-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Logo Colors (for placeholder generation) */
+  --logo-color-1: #667eea;
+  --logo-color-2: #764ba2;
+  --logo-color-3: #f093fb;
+  --logo-color-4: #f5576c;
+  --logo-color-5: #4facfe;
+  --logo-color-6: #00f2fe;
+  --logo-color-7: #43e97b;
+  --logo-color-8: #38f9d7;
+}
+
+/* Color Utility Classes */
+.text-primary {
+  color: var(--color-text-primary);
+}
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+.text-light {
+  color: var(--color-text-light);
+}
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+}
+
+/* Gradient Utility Classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+/* Spacing Utility Classes */
+.p-0 {
+  padding: 0;
+}
+.p-sm {
+  padding: var(--spacing-sm);
+}
+.p-md {
+  padding: var(--spacing-md);
+}
+.p-lg {
+  padding: var(--spacing-lg);
+}
+.p-xl {
+  padding: var(--spacing-xl);
+}
+
+.m-0 {
+  margin: 0;
+}
+.m-sm {
+  margin: var(--spacing-sm);
+}
+.m-md {
+  margin: var(--spacing-md);
+}
+.m-lg {
+  margin: var(--spacing-lg);
+}
+.m-xl {
+  margin: var(--spacing-xl);
+}
